@@ -1,0 +1,39 @@
+{
+  "name": "hardhat-project",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-truffle5": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.4",
+    "eslint": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.8.0",
+    "hardhat-deploy": "^0.9.22",
+    "rimraf": "^3.0.2",
+    "solc": "^0.8.11",
+    "solhint": "^3.3.6",
+    "solidity-coverage": "^0.7.17"
+  },
+  "scripts": {
+    "test": "hardhat test --show-stack-traces",
+    "clean": "rimraf artifacts cache coverage",
+    "coverage": "hardhat coverage",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\"",
+    "lint:sol:fix": "solhint --max-warnings 0 \"contracts/**/*.sol\" --fix",
+    "lint": "yarn lint:js && yarn lint:sol",
+    "lint:fix": "yarn lint:js:fix && yarn lint:sol:fix"
+  }
+}
